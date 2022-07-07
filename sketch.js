@@ -58,6 +58,16 @@ function draw() {
   verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente)
   incluiPlacar()
   marcaPonto()
+  bolinhaNaoFicaPresa()
+}
+
+function bolinhaNaoFicaPresa() {
+  if (xBolinha - raio < 0) {
+    xBolinha = 23
+  }
+  if (xBolinha + raio > 600) {
+    xBolinha = 580
+  }
 }
 
 function mostraBolinha() {
